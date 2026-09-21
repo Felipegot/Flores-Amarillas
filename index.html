@@ -12,7 +12,19 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="welcome-card">
+      <span class="welcome-flower">✿</span>
+      <p class="eyebrow">una sorpresa amarilla</p>
+      <h2>Esto florece<br /><em>para ti.</em></h2>
+      <p>Entra cuando estés lista. Hay música, flores y una carta esperándote.</p>
+      <button class="enter-button" id="enterButton" type="button">Entrar a la sorpresa <span>↗</span></button>
+    </div>
+  </div>
   <main class="page-shell">
+    <audio id="backgroundMusic" loop preload="auto">
+      <source src="Floricienta%20%E2%80%94%20Flores%20Amarillas%20%5BLetra%5D.mp3" type="audio/mpeg" />
+    </audio>
     <div class="sun-glow" aria-hidden="true"></div>
     <div class="rain" aria-hidden="true"></div>
 
@@ -31,6 +43,7 @@
           <span>Abre tu ramo</span>
           <span class="button-arrow">↗</span>
         </button>
+        <button class="letter-button" id="letterButton" type="button"><span>✉</span> Hay una carta para ti</button>
         <p class="signature">Con cariño, para hacerte el día un poquito más amarillo <span>♥</span></p>
       </div>
 
@@ -39,7 +52,7 @@
         <div class="sparkle sparkle-one">✦</div>
         <div class="sparkle sparkle-two">✧</div>
         <div class="sparkle sparkle-three">·</div>
-        <figure class="bouquet-photo">
+        <figure class="bouquet-photo" id="bouquetPhoto" role="button" tabindex="0" aria-label="Tocar el ramo para ver caer pétalos">
           <img src="ramo-girasoles.jpg" alt="Ramo de girasoles amarillos" />
           <figcaption>un ramo de buenos deseos</figcaption>
         </figure>
@@ -56,10 +69,29 @@
     <footer class="footer">
       <span>hecho para iluminar tu día</span>
       <button class="mini-button" id="surpriseButton" type="button" aria-label="Ver una sorpresa">✦</button>
+      <button class="share-button" id="shareButton" type="button"><span>↗</span> compartir</button>
       <span>con mucho cariño</span>
     </footer>
 
+    <button class="sound-control" id="soundControl" type="button" aria-label="Activar música" aria-pressed="false">
+      <span class="sound-icon">♫</span>
+      <span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span id="soundLabel">música</span>
+    </button>
+
     <div class="toast" id="toast" role="status" aria-live="polite">Tu ramo está listo para florecer ✿</div>
+
+    <div class="letter-modal" id="letterModal" aria-hidden="true">
+      <div class="letter-paper" role="dialog" aria-modal="true" aria-labelledby="letterTitle">
+        <button class="close-letter" id="closeLetter" type="button" aria-label="Cerrar carta">×</button>
+        <span class="letter-stamp">✳</span>
+        <p class="letter-kicker">para una amiga especial</p>
+        <h2 id="letterTitle">Una carta para ti</h2>
+        <p>Que estas flores te recuerden lo mucho que vales, lo bonito que es tenerte cerca y todas las razones que tienes para sonreír.</p>
+        <p>Gracias por ser esa persona que hace más cálidos los días normales. Te mereces cosas bonitas, hoy y siempre.</p>
+        <p class="letter-signature">Con mucho cariño <span>♥</span></p>
+      </div>
+    </div>
   </main>
   <script src="script.js"></script>
 </body>
