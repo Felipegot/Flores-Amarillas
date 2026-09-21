@@ -26,6 +26,7 @@
       <source src="Floricienta%20%E2%80%94%20Flores%20Amarillas%20%5BLetra%5D.mp3" type="audio/mpeg" />
     </audio>
     <div class="sun-glow" aria-hidden="true"></div>
+    <div class="night-moon" aria-hidden="true"></div>
     <div class="rain" aria-hidden="true"></div>
 
     <nav class="topbar" aria-label="Navegación principal">
@@ -69,9 +70,16 @@
     <footer class="footer">
       <span>hecho para iluminar tu día</span>
       <button class="mini-button" id="surpriseButton" type="button" aria-label="Ver una sorpresa">✦</button>
-      <button class="share-button" id="shareButton" type="button"><span>↗</span> compartir</button>
       <span>con mucho cariño</span>
     </footer>
+
+    <div class="experience-tools" aria-label="Controles de la experiencia">
+      <button class="experience-button" id="lightButton" type="button" aria-pressed="true"><span>✦</span> luz</button>
+      <button class="experience-button" id="nightButton" type="button" aria-pressed="false"><span>☾</span> noche</button>
+      <button class="experience-button" id="replayButton" type="button"><span>↻</span> repetir</button>
+    </div>
+
+    <button class="share-button" id="shareButton" type="button"><span>↗</span> compartir</button>
 
     <button class="sound-control" id="soundControl" type="button" aria-label="Activar música" aria-pressed="false">
       <span class="sound-icon">♫</span>
@@ -90,6 +98,7 @@
         <p>Que estas flores te recuerden lo mucho que vales, lo bonito que es tenerte cerca y todas las razones que tienes para sonreír.</p>
         <p>Gracias por ser esa persona que hace más cálidos los días normales. Te mereces cosas bonitas, hoy y siempre.</p>
         <p class="letter-signature">Con mucho cariño <span>♥</span></p>
+        <button class="download-letter" id="downloadLetter" type="button"><span>↓</span> descargar carta</button>
       </div>
     </div>
   </main>
